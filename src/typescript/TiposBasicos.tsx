@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const TiposBasicos = () => {
 	let nombre: string = 'Fernando'
 	const edad: number = 35
