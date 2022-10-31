@@ -1,25 +1,25 @@
 interface Persona {
-	nombreCompleto: string
-	edad: number
-	direccion: Direccion
+	nombreCompleto: string;
+	edad: number;
+	direccion: Direccion;
 }
 
 interface Direccion {
-	pais: string
-	casaNo: number
+	pais: string;
+	casaNo: number;
 }
 
 export const ObjetosLiterales = () => {
 	const persona: Persona = {
-		nombreCompleto: 'Fernando',
+		nombreCompleto: "Fernando",
 		edad: 35,
 		direccion: {
-			pais: 'Canada',
+			pais: "Canada",
 			casaNo: 615,
 		},
-	}
+	};
 
-	persona.nombreCompleto = '123123'
+	persona.nombreCompleto = "123123";
 
 	return (
 		<>
@@ -28,5 +28,5 @@ export const ObjetosLiterales = () => {
 				<pre>{JSON.stringify(persona, null, 2)}</pre>
 			</code>
 		</>
-	)
-}
+	);
+};

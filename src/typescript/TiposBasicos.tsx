@@ -1,14 +1,18 @@
 export const TiposBasicos = () => {
-	let nombre: string = 'Fernando'
-	const edad: number = 35
-	const estaActivo: boolean = true
+	let nombre: string = "Fernando";
+	const edad: number = 35;
+	const estaActivo: boolean = true;
+
+	nombre.includes("f");
 
 	//array con strings
-	const poderes: string[] = [] //['Velocidad', 'Volar', 'Respirar en el agua']
+	const poderes: string[] = ["Velocidad", "Volar", "Respirar en el agua"];
 	return (
 		<>
 			<h3>Tipos basicos</h3>
-			{nombre},{edad}, {estaActivo ? 'activo' : 'no activo'}
+			{nombre},{edad}, {estaActivo ? "activo" : "no activo"}
+			<hr />
+			{poderes.join(" ")}
 		</>
-	)
-}
+	);
+};
