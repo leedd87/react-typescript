@@ -1,9 +1,12 @@
-const Funciones = () => {
+export const Funciones = () => {
+	const sumar = (a: number, b: number): number => {
+		return a + b;
+	};
+
 	return (
 		<>
 			<h3>Funciones</h3>
+			<h4>El resultado es: {sumar(1, 2)}</h4>
 		</>
 	);
 };
-
-export default Funciones;
