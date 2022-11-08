@@ -20,7 +20,7 @@ const App = () => {
 			{/* <Funciones /> */}
 			{/* <Contador /> */}
 			{/* <ContadorConHook /> */}
-			{/* <Login /> */}
+			<Login />
 		</div>
 	)
 }

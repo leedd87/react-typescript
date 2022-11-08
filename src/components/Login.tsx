@@ -1,12 +1,8 @@
-import React, { useReducer } from "react";
-
-const initalState = {
-	validando: true,
-	token: null,
-};
+import React, { useReducer } from 'react'
 
 export const Login = () => {
-	const [state, dispatch] = useReducer(reducer, initialState);
+	const [state, dispatch] = useReducer(first, second, third)
+
 	return (
 		<>
 			<h1>Login</h1>
@@ -20,5 +16,5 @@ export const Login = () => {
 
 			<button className="btn btn-danger">Log out</button>
 		</>
-	);
-};
+	)
+}
