@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useReducer } from "react";
+
+const initalState = {
+	validando: true,
+	token: null,
+};
 
 export const Login = () => {
+	const [state, dispatch] = useReducer(reducer, initialState);
 	return (
 		<>
 			<h1>Login</h1>
