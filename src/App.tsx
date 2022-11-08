@@ -6,9 +6,13 @@ import { Funciones } from "./typescript/Funciones";
 import { Login } from "./components/Login";
 
 const App = () => {
+	console.log("Hello Universo");
+	console.log("Hola Denis");
+
 	return (
 		<div className="mt-2">
 			<h1>Introduccion a Typescript React</h1>
+			<h2>Blah blah blah</h2>
 			<hr />
 			{/* <TiposBasicos /> */}
 			{/* <ObjetosLiterales /> */}
