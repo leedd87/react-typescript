@@ -8,6 +8,7 @@ import { Login } from "./components/Login";
 const App = () => {
 	console.log("Hello Universo");
 	console.log("Hola Denis");
+	console.log("agregue estilos");
 
 	return (
 		<div className="mt-2">
