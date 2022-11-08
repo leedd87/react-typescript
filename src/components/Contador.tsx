@@ -1,27 +1,31 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react'
+import { useState } from 'react'
 
 const Contador = () => {
-	const [valor, setValor] = useState(0);
+	const [valor, setValor] = useState(0)
 
-	const acumular = (numero: number) => {
-		setValor(valor + numero);
-	};
+	const acumular = (number: number) => {
+		setValor(valor + number)
+	}
 
 	return (
 		<>
 			<h3>
 				Contador <small>{valor}</small>
 			</h3>
-			<button className="btn btn-primary" onClick={() => acumular(1)}>
+			<button
+				className="btn btn-primary"
+				onClick={() => acumular(1)}>
 				+1
 			</button>
 			&nbsp;
-			<button className="btn btn-primary" onClick={() => acumular(-1)}>
+			<button
+				className="btn btn-primary"
+				onClick={() => acumular(-1)}>
 				-1
 			</button>
 		</>
-	);
-};
+	)
+}
 
-export default Contador;
+export default Contador

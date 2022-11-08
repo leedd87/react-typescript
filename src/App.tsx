@@ -1,14 +1,14 @@
 //import { ObjetosLiterales } from "./typescript/ObjetosLiterales";
 //import { TiposBasicos } from "./typescript/TiposBasicos";
-import Contador from "./components/Contador";
-import ContadorConHook from "./components/ContadorConHook";
-import { Funciones } from "./typescript/Funciones";
-import { Login } from "./components/Login";
+import Contador from './components/Contador'
+import ContadorConHook from './components/ContadorConHook'
+import { Funciones } from './typescript/Funciones'
+import { Login } from './components/Login'
 
 const App = () => {
-	console.log("Hello Universo");
-	console.log("Hola Denis");
-	console.log("agregue estilos");
+	console.log('Hello Universo')
+	console.log('Hola Denis')
+	console.log('agregue estilos')
 
 	return (
 		<div className="mt-2">
@@ -20,9 +20,9 @@ const App = () => {
 			{/* <Funciones /> */}
 			{/* <Contador /> */}
 			{/* <ContadorConHook /> */}
-			<Login />
+			{/* <Login /> */}
 		</div>
-	);
-};
+	)
+}
 
-export default App;
+export default App
