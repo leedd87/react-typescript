@@ -11,9 +11,30 @@ export const Usuarios = () => {
 			.get<ReqResListado>('/users')
 			.then((res) => {
 				console.log(res.data.data)
+				setUsuarios(res.data.data)
 			})
 			.catch((err) => console.log(err))
 	}, [])
+
+	const renderItem = (usuario: Usuario) => {
+		return (
+			<tr key={usuario.id.toString()}>
+				<th>
+					<img
+						src={usuario.avatar}
+						alt={usuario.first_name}
+						style={{ width: 35, borderRadius: 100 }}
+					/>
+					Avatar
+				</th>
+				<th>
+					{usuario.first_name}
+					{usuario.last_name}
+				</th>
+				<th>{usuario.email}</th>
+			</tr>
+		)
+	}
 
 	return (
 		<>
@@ -26,7 +47,8 @@ export const Usuarios = () => {
 						<th>email</th>
 					</tr>
 				</thead>
-				<tbody></tbody>
+				{/* <tbody>{usuarios.map((usuario) => renderItem(usuario))}</tbody> */}
+				<tbody>{usuarios.map(renderItem)}</tbody>
 			</table>
 		</>
 	)
