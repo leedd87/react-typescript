@@ -50,6 +50,7 @@ export const Usuarios = () => {
 				{/* <tbody>{usuarios.map((usuario) => renderItem(usuario))}</tbody> */}
 				<tbody>{usuarios.map(renderItem)}</tbody>
 			</table>
+			<button className="btn btn-primary">Siguientes</button>
 		</>
 	)
 }
