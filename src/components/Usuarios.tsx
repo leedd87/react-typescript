@@ -1,20 +1,37 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { reqResApi } from '../api/reqRes'
+import { useUsuarios } from '../hooks/useUsuarios'
 import { ReqResListado, Usuario } from '../interfaces/reqRes'
 
 export const Usuarios = () => {
-	const [usuarios, setUsuarios] = useState<Usuario[]>([])
+	const { usuarios, cargarUsuarios } = useUsuarios()
+	// const [usuarios, setUsuarios] = useState<Usuario[]>([])
 
-	useEffect(() => {
-		//llamada al api
-		reqResApi
-			.get<ReqResListado>('/users')
-			.then((res) => {
-				console.log(res.data.data)
-				setUsuarios(res.data.data)
-			})
-			.catch((err) => console.log(err))
-	}, [])
+	// const paginaRef = useRef(1)
+
+	// useEffect(() => {
+	// 	//llamada al api
+	// 	cargarUsuarios()
+	// }, [])
+
+	// const cargarUsuarios = async () => {
+	// 	const resp = await reqResApi.get<ReqResListado>('/users', {
+	// 		params: { page: paginaRef.current },
+	// 	})
+
+	// 	if (resp.data.data.length > 0) {
+	// 		setUsuarios(resp.data.data)
+	// 		paginaRef.current++
+	// 	} else {
+	// 		alert('No hay mas registros')
+	// 	}
+	// 	// .then((res) => {
+	// 	// 	setUsuarios(res.data.data)
+	// 	// })
+	// 	// .catch((err) => console.log(err))
+
+	// 	setUsuarios(resp.data.data)
+	// }
 
 	const renderItem = (usuario: Usuario) => {
 		return (
@@ -50,7 +67,17 @@ export const Usuarios = () => {
 				{/* <tbody>{usuarios.map((usuario) => renderItem(usuario))}</tbody> */}
 				<tbody>{usuarios.map(renderItem)}</tbody>
 			</table>
-			<button className="btn btn-primary">Siguientes</button>
+			<button
+				className="btn btn-primary"
+				onClick={cargarUsuarios}>
+				Anteriores
+			</button>
+			&nbsp;
+			<button
+				className="btn btn-primary"
+				onClick={cargarUsuarios}>
+				Siguientes
+			</button>
 		</>
 	)
 }
