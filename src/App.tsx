@@ -15,8 +15,6 @@ const App = () => {
 	return (
 		<div className="mt-2">
 			<h1>Introduccion a Typescript React</h1>
-			<h2>Blah blah blah</h2>
-			<hr />
 			{/* <TiposBasicos /> */}
 			{/* <ObjetosLiterales /> */}
 			{/* <Funciones /> */}

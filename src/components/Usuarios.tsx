@@ -4,7 +4,7 @@ import { useUsuarios } from '../hooks/useUsuarios'
 import { ReqResListado, Usuario } from '../interfaces/reqRes'
 
 export const Usuarios = () => {
-	const { usuarios, cargarUsuarios } = useUsuarios()
+	const { usuarios, paginaSiguiente, paginaAnterior } = useUsuarios()
 	// const [usuarios, setUsuarios] = useState<Usuario[]>([])
 
 	// const paginaRef = useRef(1)
@@ -42,7 +42,6 @@ export const Usuarios = () => {
 						alt={usuario.first_name}
 						style={{ width: 35, borderRadius: 100 }}
 					/>
-					Avatar
 				</th>
 				<th>
 					{usuario.first_name}
@@ -56,7 +55,7 @@ export const Usuarios = () => {
 	return (
 		<>
 			<h3>Usuario</h3>
-			<table>
+			<table className="table">
 				<thead>
 					<tr>
 						<th>Avatar</th>
@@ -69,13 +68,13 @@ export const Usuarios = () => {
 			</table>
 			<button
 				className="btn btn-primary"
-				onClick={cargarUsuarios}>
+				onClick={paginaAnterior}>
 				Anteriores
 			</button>
 			&nbsp;
 			<button
 				className="btn btn-primary"
-				onClick={cargarUsuarios}>
+				onClick={paginaSiguiente}>
 				Siguientes
 			</button>
 		</>

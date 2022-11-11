@@ -19,8 +19,8 @@ export const useUsuarios = () => {
 
 		if (resp.data.data.length > 0) {
 			setUsuarios(resp.data.data)
-			paginaRef.current++
 		} else {
+			paginaRef.current--
 			alert('No hay mas registros')
 		}
 		// .then((res) => {
@@ -30,8 +30,22 @@ export const useUsuarios = () => {
 
 		setUsuarios(resp.data.data)
 	}
+
+	const paginaSiguiente = (resp: any) => {
+		paginaRef.current++
+		cargarUsuarios()
+	}
+
+	const paginaAnterior = (resp: any) => {
+		if (paginaRef.current > 1) {
+			paginaRef.current--
+			cargarUsuarios()
+		}
+	}
+
 	return {
 		usuarios,
-		cargarUsuarios,
+		paginaSiguiente,
+		paginaAnterior,
 	}
 }
