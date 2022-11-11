@@ -4,14 +4,11 @@
 // import ContadorConHook from './components/ContadorConHook'
 // import { Funciones } from './typescript/Funciones'
 // import { Login } from './components/Login'
+//import { Usuarios } from './components/Usuarios'
 
-import { Usuarios } from './components/Usuarios'
+import { Formularios } from './components/Formularios'
 
 const App = () => {
-	console.log('Hello Universo')
-	console.log('Hola Denis')
-	console.log('agregue estilos')
-
 	return (
 		<div className="mt-2">
 			<h1>Introduccion a Typescript React</h1>
@@ -21,7 +18,8 @@ const App = () => {
 			{/* <Contador /> */}
 			{/* <ContadorConHook /> */}
 			{/* <Login /> */}
-			<Usuarios />
+			{/* <Usuarios /> */}
+			<Formularios />
 		</div>
 	)
 }
